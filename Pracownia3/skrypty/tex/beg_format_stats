@@ -1,0 +1,5 @@
+\begin{table}[h]
+  \begin{tabular}{| l | l l l | l l l | l l|}
+  \hline
+  Funkcja & a & b & x & \multicolumn{3}{|c}{Wyniki} & \multicolumn{2}{|c|}{Blad }\\
+  \hline 

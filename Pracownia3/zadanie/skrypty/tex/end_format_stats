@@ -1,0 +1,18 @@
+    \hline  
+  \end{tabular}\\\\
+  \begin{tabular}{r | l}
+  Oznaczenie & znaczenie \\
+  \hline
+  Funkcja & całkę z niej przybliżaliśmy \\
+  a & początek przedziału \\
+  b & koniec przedziału  na którym przybliżaliśmy funkcję przez NFSI3\\
+  x & koniec przedziału całkowania \\
+  Wyniki: & \\
+  true & prawdziwa wartość \\
+  mono & dla punktów kluczowych równoodległych \\
+  dist & dla zaburzonych punktów kluczowych \\
+  Błąd & \\
+  mono & jw. \\
+  dist & jw.
+  \end{tabular}
+\end{table}

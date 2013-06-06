@@ -1,0 +1,27 @@
+#! /bin/bash
+cat "./skrypty/gnumake"
+echo "set xzeroaxis"
+echo "set yrange [*:*]"
+echo "set output \"./wykresy/"$@".png\""
+echo -n "plot"
+for var in met_siecz met_sty 
+do
+  echo -n " \"./wyniki/"$@"/"$var".dw\" using 1:2 title \""$var"\" with filledcurves x1," 
+done
+echo " \"./wyniki/"$@"/odwr_interpol_kw.dw\" using 1:2 title \"odwr_interpol_kw\" with filledcurves x1"
+echo "set output \"./wykresy/"$@"_t.png\""
+echo "set yrange [0:*]"
+echo -n "plot"
+for var in met_siecz met_sty 
+do
+  echo -n " \"./wyniki/"$@"/"$var".dt\" using 1: xtic(2) title \""$var"\" with histogram," 
+done
+echo " \"./wyniki/"$@"/odwr_interpol_kw.dt\" using 1: xtic(2) title \"odwr_interpol_kw\" with histogram"
+echo "set output \"./wykresy/"$@"_p.png\""
+echo "set yrange [*:*]"
+echo -n "plot"
+for var in met_siecz met_sty 
+do
+  echo -n " \"./wyniki/"$@"/"$var".dr\" using 1:2 title \""$var"\" with filledcurves x1," 
+done
+echo " \"./wyniki/"$@"/odwr_interpol_kw.dr\" using 1:2 title \"odwr_interpol_kw\" with filledcurves x1"

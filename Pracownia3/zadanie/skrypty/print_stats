@@ -1,0 +1,38 @@
+#! /bin/bash
+cat "./skrypty/tex/beg_format_stats" > "./skrypty/tex/b"
+tempdir="./skrypty/tex"
+for var in $( ls ./testy/*.din )
+do
+  var="$( basename "${var%.din}")"
+  for var2 in "b" "e"
+  do
+    echo $var >> "./skrypty/tex"/$var2
+  done
+  echo "&" >> "./skrypty/tex"/b
+  echo $( awk "NR==2" "./testy/$var.din" ) >> "./skrypty/tex"/b
+  for var2 in $( awk "NR==1" "./testy/$var.din" )
+  do
+    echo "&" >> "./skrypty/tex"/b
+    echo $var2 >> "./skrypty/tex"/b
+  done
+  for var2 in "met_sty" "met_siecz" "odwr_interpol_kw"
+  do
+    echo "&" >> "./skrypty/tex"/e
+    echo $( awk "NR==1" "./wyniki/$var/$var2.dt" ) >> "./skrypty/tex"/e
+    echo "&" >> "./skrypty/tex"/e
+    echo $( awk "NR==2" "./wyniki/$var/$var2.dt" ) >> "./skrypty/tex"/e
+    echo "&" >> "./skrypty/tex"/e
+    echo $( awk "NR==3" "./wyniki/$var/$var2.dt" ) >> "./skrypty/tex"/e
+    echo "&" >> "./skrypty/tex"/e
+    echo $( awk "NR==4" "./wyniki/$var/$var2.dt" ) >> "./skrypty/tex"/e
+  done
+  echo "\\\\" >> "./skrypty/tex"/b
+  echo "\\\\" >> "./skrypty/tex"/e
+
+done
+cat "./skrypty/tex/end_format_stats" >> "./skrypty/tex"/e
+cat "./skrypty/tex/b" > "./wyniki/stats.tex"
+cat "./skrypty/tex/inter_format_stats" >> "./wyniki/stats.tex"
+cat "./skrypty/tex/e" >> "./wyniki/stats.tex"
+rm "./skrypty/tex/b"
+rm "./skrypty/tex/e"

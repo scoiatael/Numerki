@@ -1,0 +1,10 @@
+set terminal png truecolor size 800,600
+set style fill transparent solid 0.1
+set xzeroaxis
+set yrange [*:*]
+set output "./wykresy/test2_int.png"
+plot"./wyniki/test2/Integrals.dw" using 1:2 title "t" with filledcurves x1,"./wyniki/test2/Integrals.dw" using 1:3 title "m" with filledcurves x1,"./wyniki/test2/Integrals.dw" using 1:4 title "d" with filledcurves x1
+set output "./wykresy/test2_diff.png"
+plot"./wyniki/test2/Integrals.dd" using 1:2 title "m" with filledcurves x1,"./wyniki/test2/Integrals.dd" using 1:3 title "d" with filledcurves x1
+set output "./wykresy/test2_spline.png"
+plot"./wyniki/test2/Approximations.db" using 1:2 title "t" with filledcurves x1,"./wyniki/test2/Approximations.db" using 1:3 title "m" with filledcurves x1,"./wyniki/test2/Approximations.db" using 1:4 title "d" with filledcurves x1

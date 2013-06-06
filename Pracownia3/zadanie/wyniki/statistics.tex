@@ -1,0 +1,32 @@
+\begin{table}[h]
+  \begin{tabular}{| l | l l l | l l l | l l|}
+  \hline
+  Funkcja & a & b & x & \multicolumn{3}{|c}{Wyniki} & \multicolumn{2}{|c|}{Blad }\\
+  & & & & true & mono & dist & mono & dist \\
+  \hline 
+sin(x) & 0 & 6 & 4 & 1.65364 & 1.6524 & 1.65156 & 3.12227 & 2.90059\\
+x*x*x*x-2*x-10 & -5 & 6 & 2 & 582.4 & 583.35 & 584.212 & 2.78753 & 2.50713\\
+1/(x*x) & 1 & 14 & 4 & 0.75 & 0.754318 & 0.75664 & 2.23975 & 2.05288\\
+sin(x)*sin(4*x)+2 & -2 & 3 & 3 & 10.0115 & 10.0118 & 10.0098 & 4.50875 & 3.77205\\
+cos(6*x+6) & 41 & 81 & 45 & -0.17785 & -0.455832 & -0.698672 & -0.193965 & -0.466636\\
+sin(x)+cos(x) & -1 & 2 & 1.5 & 2.30853 & 2.30774 & 2.30729 & 3.46504 & 3.26966\\
+x*x*x+3 & 3 & 6 & 5.5 & 216.016 & 216.037 & 216.047 & 3.99609 & 3.84353\\
+sin(x)*2 & 5 & 7 & 5.5 & -0.850015 & -0.849822 & -0.849758 & 3.64289 & 3.51847\\
+    \hline  
+  \end{tabular}\\\\
+  \begin{tabular}{r | l}
+  Oznaczenie & znaczenie \\
+  \hline
+  Funkcja & całkę z niej przybliżaliśmy \\
+  a & początek przedziału \\
+  b & koniec przedziału  na którym przybliżaliśmy funkcję przez NFSI3\\
+  x & koniec przedziału całkowania \\
+  Wyniki: & \\
+  true & prawdziwa wartość \\
+  mono & dla punktów kluczowych równoodległych \\
+  dist & dla zaburzonych punktów kluczowych \\
+  Błąd & \\
+  mono & jw. \\
+  dist & jw.
+  \end{tabular}
+\end{table}

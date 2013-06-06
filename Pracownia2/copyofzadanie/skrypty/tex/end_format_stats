@@ -1,0 +1,10 @@
+    \hline  
+  \end{tabular}\\\\
+  \begin{tabular}{r | l}
+    Przybliżenia  & Szacunkowe wartości miejsca zerowego, od których zaczynać miały metody\\
+    t             & Czas wykonywania obliczeń w mikrosekundach\\
+    i             & Ilość wykonanych iteracji \\ & \indent (wartość 103 oznacza, że nie udało się znaleźć dość dobrego przybliżenia)\\
+    r             & Średnia wartość numerycznego rzędu zbieżności\\
+    m             & Ostatnie przybliżenie miejsca zerowego\\
+  \end{tabular}
+\end{table}

@@ -1,0 +1,2 @@
+set terminal png truecolor size 800,600
+set style fill transparent solid 0.1

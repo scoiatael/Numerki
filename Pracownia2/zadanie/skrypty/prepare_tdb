@@ -1,0 +1,16 @@
+#! /bin/bash
+cat "./skrypty/gnumake"
+echo "set output \"./wykresy/"$@"DB.png\""
+echo -n "plot"
+for var in met_siecz met_sty 
+do
+  echo -n " \"./wyniki/"$@"/"$var".dp\" using 1:2 title \""$var"\" with filledcurves x1," 
+done
+echo " \"./wyniki/"$@"/odwr_interpol_kw.dp\" using 1:2 title \"odwr_interpol_kw\" with filledcurves x1"
+echo "set output \"./wykresy/"$@"DBd.png\""
+echo -n "plot"
+for var in met_siecz met_sty 
+do
+  echo -n " \"./wyniki/"$@"/"$var".dp\" using 1:3 title \"d"$var"\" with filledcurves x1," 
+done
+echo " \"./wyniki/"$@"/odwr_interpol_kw.dp\" using 1:3 title \"dodwr_interpol_kw\" with filledcurves x1"

@@ -1,0 +1,6 @@
+set terminal png truecolor size 800,600
+set style fill transparent solid 0.1
+set output "./wykresy/test2DB.png"
+plot "./wyniki/test2/met_siecz.dp" using 1:2 title "met_siecz" with filledcurves x1, "./wyniki/test2/met_sty.dp" using 1:2 title "met_sty" with filledcurves x1, "./wyniki/test2/odwr_interpol_kw.dp" using 1:2 title "odwr_interpol_kw" with filledcurves x1
+set output "./wykresy/test2DBd.png"
+plot "./wyniki/test2/met_siecz.dp" using 1:3 title "dmet_siecz" with filledcurves x1, "./wyniki/test2/met_sty.dp" using 1:3 title "dmet_sty" with filledcurves x1, "./wyniki/test2/odwr_interpol_kw.dp" using 1:3 title "dodwr_interpol_kw" with filledcurves x1

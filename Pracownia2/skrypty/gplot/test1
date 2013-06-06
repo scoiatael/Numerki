@@ -1,0 +1,12 @@
+set terminal png truecolor size 800,600
+set style fill transparent solid 0.1
+set xzeroaxis
+set yrange [*:*]
+set output "./wykresy/test1.png"
+plot "./wyniki/test1/met_siecz.dw" using 1:2 title "met_siecz" with filledcurves x1, "./wyniki/test1/met_sty.dw" using 1:2 title "met_sty" with filledcurves x1, "./wyniki/test1/odwr_interpol_kw.dw" using 1:2 title "odwr_interpol_kw" with filledcurves x1
+set output "./wykresy/test1_t.png"
+set yrange [0:*]
+plot "./wyniki/test1/met_siecz.dt" using 1: xtic(2) title "met_siecz" with histogram, "./wyniki/test1/met_sty.dt" using 1: xtic(2) title "met_sty" with histogram, "./wyniki/test1/odwr_interpol_kw.dt" using 1: xtic(2) title "odwr_interpol_kw" with histogram
+set output "./wykresy/test1_p.png"
+set yrange [*:*]
+plot "./wyniki/test1/met_siecz.dr" using 1:2 title "met_siecz" with filledcurves x1, "./wyniki/test1/met_sty.dr" using 1:2 title "met_sty" with filledcurves x1, "./wyniki/test1/odwr_interpol_kw.dr" using 1:2 title "odwr_interpol_kw" with filledcurves x1

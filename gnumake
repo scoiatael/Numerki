@@ -1,0 +1,4 @@
+set terminal png truecolor size 800,600
+set output "plot.png"
+set style fill transparent solid 0.1
+plot "data.dat" using 1:4 title "1st" with filledcurves x1, "data.dat" using 1:5 title "2nd" with filledcurves x1
